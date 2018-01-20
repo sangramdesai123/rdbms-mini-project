@@ -1,4 +1,4 @@
-
+	
 <?php 
 	include_once 'header.php'
  ?>
@@ -6,10 +6,13 @@
 		<div class="main-wrapper">
 			<h2>Home</h2>
 			<?php 
-				if($_GET['login']=="empty")
+			 if(isset($_GET['login']))
+			 {
+			 	if($_GET['login']=="empty")
 				{
 				 echo "".'<script type="text/javascript">alert("wrong user or password");</script> ' ;
 				}
+			}
 			 ?>
 			<?php 
 			 if(isset($_SESSION['u_id']))
