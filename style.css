@@ -100,11 +100,14 @@ body{
 a{
 	text-decoration: none;
 }
+.main-container{
+	width: 100%;
+}
 .main-wrapper{
 	margin: 0 auto;
-	width: 1000px;
+	width: 100%;
 }
-header img{
+header .logo{
 	position: fixed;
 	height: 59px;
 	width: 120px;
@@ -203,7 +206,7 @@ header .nav-login a{
 	cursor: pointer;
 }
 .main-container{
-	padding-top: 40px;
+	padding-top: 0px;
 
 
 }
@@ -261,3 +264,4 @@ header .nav-login form .new{
 header .nav-login form .new:hover{
 	background-color: #42d8b6;
 }
+
