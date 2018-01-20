@@ -13,6 +13,8 @@
 						<button type="submit" name="submit">
 							Sign Up
 						</button>
+						<br>
+						<br>
 
 			</form>
 		</div>

@@ -6,13 +6,14 @@
 <head><style>
 * {box-sizing: border-box}
 .mySlides {display: none}
-img {vertical-align: middle;}
+
 
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
   position: relative;
   margin: auto;
+  background-color: #353530;
 }
 
 /* Next & previous buttons */
@@ -64,15 +65,18 @@ img {vertical-align: middle;}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
+.dotbar{
+  padding: 10px;
+  background-color: #353534;
+}
 .active, .dot:hover {
   background-color: #717171;
 }
@@ -84,8 +88,8 @@ img {vertical-align: middle;}
 }
 #l1{
   width: 250px;
-  height: 60px;
-  overflow: auto;
+  height: 55px;
+  margin: 0px;
 }
 .l1{
   text-align: center;
@@ -101,19 +105,13 @@ img {vertical-align: middle;}
 </head>
 <body>
   
-<!--	<section class="main-container">
-		<div class="main-wrapper">
-  	<h2>Home</h2>
-
-		</div>
-	</section>-->
   <div class="l1"><img id="l1" src="images/logo2.jpg"></div>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 4</div>
   <img src="images/img1.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+  <div class="text">Caption Text<br><h1>hello</h1></div>
 </div>
 
 <div class="mySlides fade">
@@ -138,7 +136,6 @@ img {vertical-align: middle;}
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
-<br>
 
 <div style="text-align:center" class="dotbar">
   <span class="dot" onclick="currentSlide(1)"></span> 
@@ -146,7 +143,12 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span> 
 </div>
- 
+  <section class="main-container">
+    <div class="main-wrapper">
+    <h2>Home</h2>
+
+    </div>
+  </section>
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);

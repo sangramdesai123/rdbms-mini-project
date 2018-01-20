@@ -6,14 +6,18 @@
 <head>
 	<title>log in</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		* {box-sizing: border-box}
+	</style>
 </head>
 <body>
 	<header>
 		<nav>
 			<div class="main-wrapper">
-			    <img src="images/logo.jpg" class="logo" style="width: 180px">
-				<ul>
-					<li><a class="an" href="Home.php">Home</a></li>
+			   <!-- <img src="images/logo.jpg" class="logo" style="width: 180px">
+				--><ul>
+					<li><a class="an" href="#"><img src="images/logo.jpg" class="logo" style="width: 245px;position: absolute;"></a></li>
+					<li style="background-color: green"><a class="an" href="Home.php">Home</a></li>
 					<li><a class="an" href="contact.php">Contact</a></li>
 					<li><a class="an" href="about.php">About</a></li>
 					<li><a class="an" href="news.php">News</a></li>
