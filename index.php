@@ -1,6 +1,6 @@
 	
 <?php 
-	include_once 'header.php'
+	include_once 'Home.php'
  ?>
 	<section class="main-container">
 		<div class="main-wrapper">

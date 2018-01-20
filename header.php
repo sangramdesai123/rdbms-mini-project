@@ -11,7 +11,7 @@
 	<header>
 		<nav>
 			<div class="main-wrapper">
-			    <img src="images/logo.jpg" class="logo">
+			    <img src="images/logo.jpg" class="logo" style="width: 180px">
 				<ul>
 					<li><a class="an" href="Home.php">Home</a></li>
 					<li><a class="an" href="contact.php">Contact</a></li>

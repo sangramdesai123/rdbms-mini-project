@@ -5,7 +5,6 @@
 <html>
 <head><style>
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -26,7 +25,7 @@ img {vertical-align: middle;}
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 23px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
@@ -45,7 +44,7 @@ img {vertical-align: middle;}
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 18px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -56,7 +55,7 @@ img {vertical-align: middle;}
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 18px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -83,6 +82,15 @@ img {vertical-align: middle;}
   animation-name: fade;
   animation-duration: 1.5s;
 }
+#l1{
+  width: 250px;
+  height: 60px;
+  overflow: auto;
+}
+.l1{
+  text-align: center;
+  background-color: #ffcc00;
+}
 
 @keyframes fade {
   from {opacity: .4} 
@@ -92,9 +100,14 @@ img {vertical-align: middle;}
 </style>
 </head>
 <body>
-	<section class="main-container">
+  
+<!--	<section class="main-container">
 		<div class="main-wrapper">
-			<h2>Home</h2>
+  	<h2>Home</h2>
+
+		</div>
+	</section>-->
+  <div class="l1"><img id="l1" src="images/logo2.jpg"></div>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
@@ -127,15 +140,13 @@ img {vertical-align: middle;}
 </div>
 <br>
 
-<div style="text-align:center">
+<div style="text-align:center" class="dotbar">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span> 
 </div>
-
-		</div>
-	</section>
+ 
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
