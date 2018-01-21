@@ -6,17 +6,31 @@
 <head>
 	<title>log in</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		* {box-sizing: border-box}
+		#l1{
+		  width: 250px;
+		  height: 55px;
+		  margin: 0px;
+		}
+		.l1{
+		  text-align: center;
+		  background-color: #ffcc00;
+		}
+
+	</style>
 </head>
 <body>
 	<header>
 		<nav>
 			<div class="main-wrapper">
-			    <img src="images/logo.jpg" class="logo">
 				<ul>
-					<li><a class="an" href="Home.php">Home</a></li>
+					<li class="an1"><a  href="#"><img src="images/logo.jpg" class="logo" style="width: 288px;height:50px; position:absolute;"></a>
+					</li>
+					<li style="background-color: green"><a class="an" href="Home.php">Home</a></li>
 					<li><a class="an" href="contact.php">Contact</a></li>
 					<li><a class="an" href="about.php">About</a></li>
-					<li><a class="an" href="news.php">News</a></li>
+					<li><a class="an" href="offers.php">Offers</a></li>
 				</ul>
 
 				<div class="nav-login">
@@ -26,7 +40,7 @@
 						{
 							$user=$_SESSION['u_uid'];
 						echo '<p class="para">'.$user.'</p>'.'<form action="logout.php" method="POST">
-							<button type="submit" name="submit">LogOut!
+							<button class="log" type="submit" name="submit">LogOut!
 							</button>
 							
 							</form>';
@@ -48,5 +62,8 @@
 			</div>
 		</nav>
 	</header>
+	<!--yellow hwader-->
+	  <div class="l1"><img id="l1" src="images/logo2.jpg"></div>
+
 </body>
 </html>
