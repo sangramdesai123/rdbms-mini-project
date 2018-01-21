@@ -86,15 +86,6 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
-#l1{
-  width: 250px;
-  height: 55px;
-  margin: 0px;
-}
-.l1{
-  text-align: center;
-  background-color: #ffcc00;
-}
 
 @keyframes fade {
   from {opacity: .4} 
@@ -105,7 +96,6 @@
 </head>
 <body>
   
-  <div class="l1"><img id="l1" src="images/logo2.jpg"></div>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
