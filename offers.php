@@ -6,6 +6,10 @@
 <html>
 <head>
 <style>
+h3{
+	font-size: 20px;
+	letter-spacing: 1px;
+}
 p{
 	text-align: center;
 	color: #444;
@@ -38,7 +42,8 @@ p{
 }
 
 .card:hover {
-	margin-left: 2px;
+	top: 10px;
+	 transition: 0.6s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
 }
 #of{
@@ -49,6 +54,8 @@ p{
 
 .container {
     padding: 2px 16px;
+    color: #444;
+    background-color: white;
 }
 .main-container{
 	position: relative;
@@ -85,8 +92,8 @@ To know more,visit our TicketNew Referral Page</p>
 			<div class="card">
 			  <img src="images/of1.jpg" alt="Avatar" style="width:100%">
 			  <div class="container">
-			    <h4><b>John Doe</b></h4> 
-			    <p>Architect & Engineer</p> 
+			    <h3>Amazon Pay - 50% cashback upto Rs.100</h3> 
+			    <p>Offer is valid on 16th Jan to 31st Jan 2018</p> 
 		      </div>
 		    </div>
 			
@@ -95,8 +102,8 @@ To know more,visit our TicketNew Referral Page</p>
 		<div class="card">
 			  <img src="images/of8.jpg" alt="Avatar" style="width:100%">
 			  <div class="container">
-			    <h4><b>John Doe</b></h4> 
-			    <p>Architect & Engineer</p> 
+			    <h3>Padmaavat Movie offer</h3> 
+			    <p> Offer is valid till 31st Jan 2018</p> 
 			  </div>
 		</div>
 
@@ -104,8 +111,8 @@ To know more,visit our TicketNew Referral Page</p>
 		<div class="card">
 			  <img src="images/of2.jpg" alt="Avatar" style="width:100%">
 			  <div class="container">
-			    <h4><b>John Doe</b></h4> 
-			    <p>Architect & Engineer</p> 
+			    <h3>Equitas- Visa Signature Debit Card</h3> 
+			    <p>Valid from 1st Jan 2018 to 31st March 2018</p> 
 			  </div>
 		</div>
 
@@ -113,8 +120,8 @@ To know more,visit our TicketNew Referral Page</p>
 		<div class="card">
 			  <img src="images/of3.jpg" alt="Avatar" style="width:100%">
 			  <div class="container">
-			    <h4><b>John Doe</b></h4> 
-			    <p>Architect & Engineer</p> 
+			    <h3>Equitas -Visa Platinum Debit Card Offer</h3> 
+			    <p>Valid from 1st Jan 2018 to 31st March 2018</p> 
 			  </div>
 		</div>
 
@@ -122,8 +129,8 @@ To know more,visit our TicketNew Referral Page</p>
 		<div class="card">
 			  <img src="images/of4.jpg" alt="Avatar" style="width:100%">
 			  <div class="container">
-			    <h4><b>John Doe</b></h4> 
-			    <p>Architect & Engineer</p> 
+			    <h3>MobiKwik 30% SuperCash, Max Rs.175</h3> 
+			    <p>Valid till 15th February,2018</p> 
 			  </div>
 		</div>
 
@@ -131,8 +138,8 @@ To know more,visit our TicketNew Referral Page</p>
 		<div class="card">
 			  <img src="images/of5.jpg" alt="Avatar" style="width:100%">
 			  <div class="container">
-			    <h4><b>John Doe</b></h4> 
-			    <p>Architect & Engineer</p> 
+			    <h3>Freecharge 20% cashback upto Rs.50</h3> 
+			    <p>Offer valid upto 31st January 2018</p> 
 			  </div>
 		</div>
 
@@ -140,8 +147,8 @@ To know more,visit our TicketNew Referral Page</p>
 		<div class="card">
 			  <img src="images/of6.jpg" alt="Avatar" style="width:100%">
 			  <div class="container">
-			    <h4><b>John Doe</b></h4> 
-			    <p>Architect & Engineer</p> 
+			    <h3>LazyPay – LazyPay 20% cashback</h3> 
+			    <p>Offer is valid upto 31st January 2018</p> 
 			  </div>
 		</div>
 
@@ -149,8 +156,8 @@ To know more,visit our TicketNew Referral Page</p>
 		<div class="card">
 			  <img src="images/of7.jpg" alt="Avatar" style="width:100%">
 			  <div class="container">
-			    <h4><b>John Doe</b></h4> 
-			    <p>Architect & Engineer</p> 
+			    <h3>PhonePe – PhonePe 30% off</h3> 
+			    <p>Valid upto 4th Feb, 2018</p> 
 			  </div>
 		</div>
 	</div>

@@ -40,7 +40,7 @@
 						{
 							$user=$_SESSION['u_uid'];
 						echo '<p class="para">'.$user.'</p>'.'<form action="logout.php" method="POST">
-							<button type="submit" name="submit">LogOut!
+							<button class="log" type="submit" name="submit">LogOut!
 							</button>
 							
 							</form>';
