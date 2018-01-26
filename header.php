@@ -17,17 +17,42 @@
 		  text-align: center;
 		  background-color: #ffcc00;
 		}
-
+		.l1 #se{
+			/*serch button on yellow header*/
+			font-family: arial;
+			font-size: 18px;
+			color: white;
+			cursor: pointer;
+			border: solid 2px green;
+			background-color: #209e20;
+			letter-spacing: 2px;
+			text-align: left;
+			position: relative;
+			float: right;
+			top: -45px;
+			right: 10px;
+			width: 350px;
+			height: 35px;
+			z-index: 444;   
+		}
+		.l1 #s{
+			font-size: 15px;
+			padding: 0px;
+		}
+		.l1 #se:hover{
+			background-color: green;
+		}
+ 
 	</style>
 </head>
 <body>
 	<header>
 		<nav>
 			<div class="main-wrapper">
-				<ul>
-					<li class="an1"><a  href="#"><img src="images/logo.jpg" class="logo" style="width: 288px;height:50px; position:absolute;"></a>
+				<ul >
+					<li class="an1"><a  href="#"><img src="images/logo.jpg" class="logo" style="width: 16%;height:50px; position:absolute;"></a>
 					</li>
-					<li style="background-color: green"><a class="an" href="Home.php">Home</a></li>
+					<li style="background-color: green"><a class="an" href="Home.php"> Home</a></li>
 					<li><a class="an" href="contact.php">Contact</a></li>
 					<li><a class="an" href="about.php">About</a></li>
 					<li><a class="an" href="offers.php">Offers</a></li>
@@ -63,7 +88,10 @@
 		</nav>
 	</header>
 	<!--yellow hwader-->
-	  <div class="l1"><img id="l1" src="images/logo2.jpg"></div>
-
+	  <div class="l1"><img id="l1" src="images/logo2.jpg">
+	 	 <form method="GET" action="search.php">
+			  <button id="se"><i class="fa fa-search" id="s" aria-hidden="true" name="g" value="gt"></i> Serarch For More Movies</button>	  	
+		 </form>
+	 </div>
 </body>
 </html>

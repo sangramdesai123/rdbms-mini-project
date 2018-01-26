@@ -4,6 +4,9 @@
   <title></title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style type="text/css">
+  footer{
+    z-index: 9999;
+  }
     #fo{
       width: 100%;
       height: 300px;
@@ -12,6 +15,7 @@
       padding: 15px;
       font-family: comic;
       text-align: center;
+      z-index: 999;
     }
 .fa {
   align-items: center;
