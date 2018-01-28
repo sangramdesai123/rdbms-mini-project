@@ -199,26 +199,135 @@
 						<p id="pa">win a maximum of 5 discount codes every month. <br>
 						To know more,visit our TicketNew Referral Page</p>
 					</div>
-				<?php
-				include 'login.php';
-				$sql='SELECT * FROM movies';
-				$res=mysqli_query($con,$sql);
 
-				while ($row=mysqli_fetch_array($res)) {
-				echo "<div class='container'>";?><img src="<?php echo 
-				$row["path"];?>" height="200" width="316" class="image">
-				<?php echo "<div class='overlay'>";?>
-				<?php echo " <div class='text1'>" .$row["Name"]."</div>";
-				?>
-				<?php echo "</div><div id='lable'>";?>
-							  <div class="data">
-							    <h3>Amazon Pay </h3> 
-							    <p>Offer is valid on 16th Jan to 31st Jan 2018</p> 
-							    <button class="b1">BOOK NOW</button>
-						      </div>
-				<?php echo "</div></div>";
-				}
+				<?php
+//adding filter logic 
+				include 'login.php';
+				if (!empty($_GET['Type'] ) || !empty($_GET['Language1'])  || !empty($_GET['Genre']) )
+				{
+					$res=0;
+					if (isset($_GET['Type'])) 
+					{
+						if ($_GET['Type']=="HollyWood") {
+							$sql='SELECT * FROM movies WHERE Type="Hollywood"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Type']=="BollyWood") {
+							$res=0;
+							$sql='SELECT * FROM movies WHERE Type="BollyWood"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Type']=="TollyWood") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Type="TollyWood"';
+							$res=mysqli_query($con,$sql);
+						}
+					}
+					if (isset($_GET['Language1'])) 
+					{
+						if ($_GET['Language1']=="Hindi") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Language1="Hindi"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Language1']=="Marathi") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Language1="Marathi"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Language1']=="English") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Language1="English"';
+							$res=mysqli_query($con,$sql);					}
+						elseif ($_GET['Language1']=="Gujarati") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Language1="Gujarati"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Language1']=="Punjabi") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Language1="Punjabi"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Language1']=="Tamil") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Language1="Tamil"';
+							$res=mysqli_query($con,$sql);
+						}
+					}
+					if (isset($_GET['Genre'])) 
+					{
+						if ($_GET['Genre']=="Action") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Genre="Action"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Genre']=="Adventure") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Genre="Adventure"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Genre']=="Animation") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Genre="Animation"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Genre']=="History") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Genre="Historys"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Genre']=="Comedy") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Genre="Comedy"';
+							$res=mysqli_query($con,$sql);
+						}
+						elseif ($_GET['Genre']=="Science-fi") {
+								$res=0;
+							$sql='SELECT * FROM movies WHERE Genre="Science-fi"';
+							$res=mysqli_query($con,$sql);
+						}
+					}
+						while ($row=mysqli_fetch_array($res)) {
+						echo "<div class='container'>";?><img src="<?php echo 
+						$row["path"];?>" height="200" width="316" class="image">
+						<?php echo "<div class='overlay'>";?>
+						<?php echo " <div class='text1'>" .$row["Name"]."</div>";
+						?>
+						<?php echo "</div><div id='lable'>";?>
+									  <div class="data">
+									    <h3>Amazon Pay </h3> 
+									    <p>Offer is valid on 16th Jan to 31st Jan 2018</p> 
+									    <form method="GET" action="bookTicket.php">
+									   		 <button class="b1">BOOK NOW</button>
+									    </form>
+									   
+								      </div>
+						<?php echo "</div></div>";
+						}
+
+
+			}
+			else{
+						$sql='SELECT * FROM movies';
+						$res=mysqli_query($con,$sql);
+						while ($row=mysqli_fetch_array($res)) {
+						echo "<div class='container'>";?><img src="<?php echo 
+						$row["path"];?>" height="200" width="316" class="image">
+						<?php echo "<div class='overlay'>";?>
+						<?php echo " <div class='text1'>" .$row["Name"]."</div>";
+						?>
+						<?php echo "</div><div id='lable'>";?>
+									  <div class="data">
+									    <h3>Amazon Pay </h3> 
+									    <p>Offer is valid on 16th Jan to 31st Jan 2018</p> 
+									    <button class="b1">BOOK NOW</button>
+								      </div>
+						<?php echo "</div></div>";
+						}
+			}
 				 ?>
+
 		
 
 			</div>
