@@ -31,7 +31,7 @@ if(isset($_POST['submit']))
 					header("Location:index.php?login=errorindehashedpwd");
 					exit();
 				}elseif($hashedPwdCheck == true){
-					//log in the user in website here
+					//log in the user in website here creating session verible for user
 					$_SESSION['u_id']=$row['user_id'];
 					$_SESSION['u_first']=$row['user_first'];
 					$_SESSION['u_last']=$row['user_last'];

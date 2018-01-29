@@ -287,7 +287,7 @@
 							$sql='SELECT * FROM movies WHERE Genre="Science-fi"';
 							$res=mysqli_query($con,$sql);
 						}
-					}
+					}echo '<form method="GET" action="bookTicket.php">';
 						while ($row=mysqli_fetch_array($res)) {
 						echo "<div class='container'>";?><img src="<?php echo 
 						$row["path"];?>" height="200" width="316" class="image">
@@ -298,17 +298,19 @@
 									  <div class="data">
 									    <h3>Amazon Pay </h3> 
 									    <p>Offer is valid on 16th Jan to 31st Jan 2018</p> 
-									    <form method="GET" action="bookTicket.php">
-									   		 <button class="b1">BOOK NOW</button>
-									    </form>
+									    
+									   		 <button name="book" value='<?php echo $row["Name"]; ?>' class="b1">BOOK NOW</button>
+									    
 									   
 								      </div>
 						<?php echo "</div></div>";
 						}
+						echo "</form>" ;
 
 
 			}
 			else{
+				echo '<form method="GET" action="bookTicket.php">';
 						$sql='SELECT * FROM movies';
 						$res=mysqli_query($con,$sql);
 						while ($row=mysqli_fetch_array($res)) {
@@ -321,10 +323,13 @@
 									  <div class="data">
 									    <h3>Amazon Pay </h3> 
 									    <p>Offer is valid on 16th Jan to 31st Jan 2018</p> 
-									    <button class="b1">BOOK NOW</button>
+									   
+									    <button name="book" value='<?php echo $row["Name"]; ?>' class="b1">BOOK NOW</button>
+									   
 								      </div>
 						<?php echo "</div></div>";
 						}
+						 echo "</form>";
 			}
 				 ?>
 

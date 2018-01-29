@@ -1,10 +1,7 @@
-<?php
-	include 'header.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
+
 <style>
 /* Full-width input fields */
 input {
@@ -69,7 +66,7 @@ span.psw {
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -114,83 +111,50 @@ span.psw {
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }
-.contain{
- width: 500px;
- height: 400px;
- margin-left: 10px;
- margin: 20px;
-}
-#Videos{
-	position:absolute;
-	width: 780px;
-	height: 400px;
-	top: 140px;
-	left: 550px;
-	background-color: white;
-}
-img{
-	height: 400px;
-	width: 500px;
-}
-.book button{
-	display: block;
-	margin: 0 auto;
-	width: 30%;
-	height: 40px;
-	background-color: red;
-	border: none;
-	font-family: arial;
-	font-size: 16px;
-	color: white;
-	cursor: pointer;
-}
-.book button:hover{
-	background-color:red;
-	 box-shadow: 3px 5px #888888;
-	}
 </style>
 </head>
 <body>
-<?php 
-include 'login.php';
-$name1=$_GET["book"];
-$sql="SELECT * FROM movies WHERE Name='$name1'";
-$res=mysqli_query($con,$sql);
-if (!$res) {
-	printf("Error: %s\n", mysqli_error($con));
-}
-else{
-$row=0;
-while ($row=mysqli_fetch_array($res)){
-	echo '<div class="contain">';?>
-	<img src="<?php echo $row['path'];?>">
-	<?php echo "</div>";}
-} ?>
-<div id="Videos">
 
+
+<div id="b1" class="modal">
+  
+  <form class="modal-content animate" action="my.php" method="POST">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('b1').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <h4>Username</h4>
+      <input type="text" placeholder="Enter Username" name="uid" required>
+
+     <b>Password</b>
+      <input type="password" placeholder="Enter Password" name="pwd" required>
+        
+      <button class="newbtn" type="submit" name="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+         <button type="button" onclick="document.getElementById('b1').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
 </div>
-<?php
-//if user is loged in
-if (isset($_SESSION['u_id'])) {
-  ?>
- 			<form class="book" action="Email.php" method="POST">
-						<button type="submit" name="submit">
-							Book My Ticket
-						</button>
-						<br>
-						<br>
 
-			</form>
+<script>
+// Get the modal
+var modal = document.getElementById('b1');
 
-<?php
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
-else{
- include 'booklogin.html';
-}
-?>
+</script>
+
 </body>
 </html>
-
-<?php
-	include 'footer.php';
-?>

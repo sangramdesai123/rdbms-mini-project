@@ -33,7 +33,7 @@
 			right: 10px;
 			width: 350px;
 			height: 35px;
-			z-index: 444;   
+			z-index: 1;   
 		}
 		.l1 #s{
 			font-size: 15px;
