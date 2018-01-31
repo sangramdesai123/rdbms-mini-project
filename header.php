@@ -36,11 +36,24 @@
 			z-index: 1;   
 		}
 		.l1 #s{
-			font-size: 15px;
-			padding: 0px;
+			    font-size: 15px;
+			    padding: 0px;
+			    width: 10px;
+			    height: 10px;
+			    padding-right: 20px;
 		}
 		.l1 #se:hover{
 			background-color: green;
+		}
+		header .nav-login form .log{
+		 width: 130px;
+		 height: 30px;
+		 cursor: pointer;	
+		 position: relative;	
+		}
+		header .nav-login form .log:hover
+		{
+			background-color: #008000;
 		}
  
 	</style>
@@ -73,8 +86,8 @@
 						}
 						else{
 						echo '<form action="my.php" method="POST">
-						<input type="text" name="uid" placeholder="UserName">
-						<input type="password" name="pwd" placeholder="password">
+						<input type="text" name="uid" placeholder="UserName" required>
+						<input type="password" name="pwd" placeholder="password" required>
 						<button type="submit" name="submit">
 							Log In!
 						</button>
@@ -90,7 +103,7 @@
 	<!--yellow hwader-->
 	  <div class="l1"><img id="l1" src="images/logo2.jpg">
 	 	 <form method="GET" action="search.php">
-			  <button id="se"><i class="fa fa-search" id="s" aria-hidden="true" name="g" value="gt"></i> Serarch For More Movies</button>	  	
+			  <button id="se"><i class="fa fa-search" id="s"  name="g" value="gt"></i> Serarch For More Movies</button>	  	
 		 </form>
 	 </div>
 </body>

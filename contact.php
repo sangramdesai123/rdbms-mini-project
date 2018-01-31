@@ -96,30 +96,49 @@ h3{
 }body{
 		background-color:#0002;
 }
-
+img{
+  width: 320px;
+  height: 300px;
+}#hdiv{
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+#ofe{
+    display: inline;
+    color: #212121;
+    letter-spacing: 10px;
+    line-height: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffc107;
+     background-color: #dddddd;
+  }
 </style>
 </head>
 <body>
 	<section class="main-container">
 		<div class="main-wrapper">
-			<h2>Contacts</h2>
+    <div id="hdiv">
+      <h3 id="ofe">CONTACT US</h3>
+      </div>
 
-<p class="m">Responsive "Meet The Team" Section</p>
-<p class="m">Resize the browser window to see the effect.</p>
+<p class="m">Our Responsive Team Member"Meet The Team" </p>
+<p class="m">"Meet The Team".</p>
 <br>
 <div class="mainContainerfor">
 <div class="row">
 
-<h3 id="meet">Meet The Team</h3>
+<h3 id="meet">Meet The Team Semicolon,</h3>
 
   <div class="column">
     <div class="card">
-      <img src="images/team1.jpg" alt="Jane" style="width:100%">
+      <img src="images/team.jpg" alt="Jay" style="width:100px height:100px;">
       <div class="container">
-        <h3>Jane Doe</h3>
+        <h3>Jay Gala</h3>
         <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p><e>example@example.com</e></p>
+        <p>Front End Developer C++ Expert </p>
+        <p><e>jay.gala1@somaiya.edu</e></p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -129,10 +148,10 @@ h3{
     <div class="card">
       <img src="images/team2.jpg" alt="Mike" style="width:100%">
       <div class="container">
-        <h3>Mike Ross</h3>
+        <h3>Sangram Desai</h3>
         <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
+        <p>Back End Developer.</p>
+        <p>sangram.desai@somiya.edu</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -141,10 +160,10 @@ h3{
     <div class="card">
       <img src="images/team3.jpg" alt="John" style="width:100%">
       <div class="container">
-        <h3>John Doe</h3>
+        <h3>Tushar Kadam</h3>
         <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
+        <p>Java Developer</p>
+        <p>tushar.kadam@somaiya.edu</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>

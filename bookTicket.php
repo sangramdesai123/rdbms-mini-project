@@ -14,6 +14,7 @@ input {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    
 }
 
 /* Set a style for all buttons */
@@ -148,6 +149,11 @@ img{
 	background-color:red;
 	 box-shadow: 3px 5px #888888;
 	}
+ #in{
+    padding: 20px;
+    width: 700px;
+
+ }   
 </style>
 </head>
 <body>
@@ -173,14 +179,22 @@ while ($row=mysqli_fetch_array($res)){
 //if user is loged in
 if (isset($_SESSION['u_id'])) {
   ?>
- 			<form class="book" action="Email.php" method="POST">
-						<button type="submit" name="submit">
-							Book My Ticket
-						</button>
-						<br>
-						<br>
+              <div id="Videos">
+                    <form class="book" action="Email.php" method="GET">
+                    <div id="in">
+                        <input type="text" name="con" placeholder="How Many Seats" required>
+                        <input type="text" name="last" placeholder="LastName" required>
+                        <input type="text" name="email" placeholder="Email" required>
+                        <input type="text" name="uid" placeholder="UserName" required>
+                        <button type="submit" name="submit" value="<?php echo $name1; ?>">
+                            Book My Ticket
+                        </button>
+                        <br>
+                        <br>
+                    </div>
+                    </form>
+              </div>
 
-			</form>
 
 <?php
 }

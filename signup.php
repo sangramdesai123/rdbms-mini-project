@@ -15,11 +15,11 @@
 			}
 		?>
 			<form class="signup-form" action="psignup.php" method="POST">
-						<input type="text" name="first" placeholder="FirstName">
-						<input type="text" name="last" placeholder="LastName">
-						<input type="text" name="email" placeholder="Email">
-						<input type="text" name="uid" placeholder="UserName">
-						<input type="password" name="pwd" placeholder="password">
+						<input type="text" name="first" placeholder="FirstName" required>
+						<input type="text" name="last" placeholder="LastName" required>
+						<input type="text" name="email" placeholder="Email" required>
+						<input type="text" name="uid" placeholder="UserName" required>
+						<input type="password" name="pwd" placeholder="password" required>
 						<button type="submit" name="submit">
 							Sign Up
 						</button>
