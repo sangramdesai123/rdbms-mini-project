@@ -33,7 +33,7 @@ $total=$gs+$gs+($price*$nofoticket)+32;
 echo '
 <div ><h1 style="color:#2ba02b; text-align:center;font-size:46px;"><img src="images/correct.jpg" style="width: 80px;height: 80px ;position:relative;top:15px;border-radius:50%;">Tickets Has Been Book Successfully!!!!</h1></div>
 <div style="
- width: 550px;
+ width: 480px;
  text-align: center;
  padding: 5px;
  height:auto;
@@ -47,12 +47,12 @@ box-shadow: 0 40px 38px 0 black;
 
 ">
       <header>
-        <img src="images/logo.jpg" style="width: 540px;height: 70px">
+        <img src="images/logo.jpg" style="width: 460px;height: 70px">
         <h2 style="color:#07f107; text-shadow: grey 1px 1px;"> Your booking is confirmed!</h2>
         <p style="color: white">Booking ID <i style="color: white">WTCDHF9</i></p> 
       </header>
           <div style="
-            width: 530px;
+            width: 460px;
             height: 150px;
             position: relative;
             padding: 5px;
@@ -72,7 +72,7 @@ box-shadow: 0 40px 38px 0 black;
                 " >'.$theater.'</p>
           </div>
            <div style="
-            width: 530px;
+            width: 460px;
             height: 150px;
             position: relative;
             padding: 5px;
@@ -92,7 +92,7 @@ box-shadow: 0 40px 38px 0 black;
                       color:#ffffff;
                       letter-spacing: 1px;
                   " >ORDER SUMMARY</h1>
-            <table style="width: 520px;height: 50px;text-align: left;padding-bottom: 10px; margin-left: 15px;">
+            <table style="width: 460px;height: 50px;text-align: left;padding-bottom: 10px; margin-left: 15px;">
               <tr >
                 <td style="padding: 10px; color: white"><b>TICKET AMOUNT</b></td>
                 <td style="color:white;">Rs.'.$price.'</td>
@@ -120,8 +120,8 @@ box-shadow: 0 40px 38px 0 black;
             </table>
             <br>
           </div>
-      <footer>
-      <img src="images/foot.jpg" style="width: 520px;height:150px; position:relative;left: 0px;">
+      <footer style:"width:460">
+      <img src="images/foot.jpg" style="width: 460px;height:150px; position:relative;left: 0px;">
       <div style="padding: 30px;color:#cccccc;">
         <h4 style="text-align: left;">IMPORTANT INSTRUCTIONS</h4>
         <p style="font-size: 18px; text-align: left;">Kids of 3 years and above requires a ticket for admission</p>
