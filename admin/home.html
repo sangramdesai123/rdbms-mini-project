@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<img src="logo2.jpg">
+			<!--if user is not log in show these-->
+				<form action="#" method="GET">
+					<input id="i1" type="text" name="u_id" placeholder="User Name">
+					<input id="i2" type="password" name="pwd" placeholder="Password">
+					<button>Log In</button>
+				</form>
+			
+			<!--if user is log in show these
+
+			<form action="#" method="GET">
+				<button>Log Out</button>
+			</form>
+			-->
+	</header>
+	<div id="left">
+		<h3><img src="avater.png"> Sangram</h3>
+		<form action="#" method="GET">
+			<button class="b"  id="active" name="home">
+			<span class="glyphicon glyphicon-home"></span> Home </button>
+			<button class="b" name="movie">
+				<span class="glyphicon glyphicon-play-circle"></span> Movie
+				<button class="b b1" name="movie" value="Hollywood"> Hollywood</button>
+				<button class="b b1" name="movie" value="Bollywood"> Bollywood</button>
+				<button class="b b1" name="movie" value="Tollywood"> Tollywood</button>
+			</button>
+			<button class="b" name="ticket">
+			<span class="glyphicon glyphicon-credit-card"></span> Ticket Book</button>
+			<button class="b" name="new">
+			<span class="glyphicon glyphicon-expand"></span> New Movies</button>
+			<button class="b" name="setting">
+			<span class="glyphicon glyphicon-cog"></span> Setting</button>
+		</form>
+	</div>
+
+
+	<div id="right">
+	<?php echo "Hello" ?>
+		<!--
+		Home page
+			<h2>Welcome To DashBoard !!</h2>
+			<div id="homepage">
+				Here is data for Home page
+			</div>
+			home page end
+		-->
+			<!--Ticket Booked-->
+		<!--
+
+		<h2>Ticket Collections & Bokking!</h2>
+		<div id="ticket">
+			<table>
+				<tr>
+					<td>Total Collection :</td>
+					<td id="m"> Rs 250000.00 /-</td>
+				</tr>
+				<tr>
+					<td>Total Ticket Sold :</td>
+					<td id="m"> 1500 </td>
+				</tr>
+				<tr>
+					<td>Total Movies In Theater :</td>
+					<td id="m"> 9 </td>
+				</tr>
+			</table>
+
+			<h3 id="he">Movie Bokking Details : </h3>
+			<div id="usertable">
+				<table>
+					<tr>
+						<th style="width: 20px">Sr.No</th>
+						<th>Name</th>
+						<th style="width: 50px">No Of Ticket</th>
+						<th>Name of Movie</th>
+						<th>Price</th>
+					</tr>
+					<tr>
+						<td style="width: 20px"> 1. </td>
+						<td> Tushar Kadam </td>
+						<td style="width: 50px"> 5 </td>
+						<td>Iron Man </td>
+						<td> 600/-</td>
+					</tr>
+					<tr>
+						<td style="width: 2px"> 2. </td>
+						<td> Jasdeep Sing </td>
+						<td style="width: 50px"> 10 </td>
+						<td>Iron Man </td>
+						<td> 1500/-</td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+		Ticket booking
+		-->
+		<!-- these is for add new Movies button-->
+
+		<!--
+			<h2>Add New Movies In Theater !</h2>
+			<div id="newadd">
+				<form action="#" method="GET">
+				<h4>Enter <b><i>Id</i></b> for the movie to store in database. <span id="r"> * </span></h4>
+				<input type="text" placeholder="Enter id" name="id" required><br>
+				<hr>
+				<h4>Enter <b><i>Name</i></b> of the movie to store in database. <span id="r"> * </span></h4>
+				<input type="text" placeholder="Enter Name " name="Name" required><br>
+				<hr>
+				<h4>Enter <b><i>Path</i></b> where image is saved to store in database. <span id="r"> * </span></h4>
+				<input type="text" placeholder="Enter path" name="path" required><br>
+				<hr>
+				<h4>Enter <b><i>Type</i></b> of movie Hollywood/Bollywood etc. <span id="r"> * </span></h4>
+				<input type="text" placeholder="Type" name="Type" required><br>
+				<hr>
+				<h4>Enter <b><i>Languge</i></b> for movie Marathi/English/hindi etc. <span id="r"> * </span></h4>
+				<input type="text" placeholder="Enter Languge" name="Languge" required><br>
+				<hr>
+				<h4>Enter <b><i>Gener</i></b> for the movie to store in database. <span id="r"> * </span></h4>
+				<input type="text" placeholder="Enter Gener" name="Gener" required><br>
+				<hr>
+				<h4>Enter <b><i>Price</i></b> for the movie to store in database. <span id="r"> * </span></h4>
+				<input type="text" placeholder="Enter Price" name="Price" required><br>
+				<hr>
+				<h4>Enter <b><i>Rating</i></b> for the movie given by user in %x. <span id="r"> * </span></h4>
+				<input type="text" placeholder="Enter Rating" name="Rating" required><br>
+				<hr>
+				<button class="btn">Add To DataBase</button>
+			</form>
+			</div>
+			<div id="info">
+				Here is Data!
+				<img src="logo2.jpg">
+				<p><b>Name:</b> Movie </p>
+				<p><b>Languge:</b>  Marathi </p>
+				<p><b>Type:</b>  BollyWood </p>
+				<p><b>Price:</b>  Rs.120/- </p>
+				<p><b>Rating:</b>  90% </p>
+			</div>
+		Add New ovie Button
+		-->
+
+	<!-- Settings -->
+
+	<!--	
+		<h2>User Account Settings !</h2>
+
+			<div id="main">
+				<div id="imgdiv">
+					<img src="avater.png">
+				</div>
+				<div id="userinfo">
+					<p><b>Name:</b> Sangram </p>
+					<p><b>Gmail:</b> sangramdesai@gmail.com </p>
+					<p><b>Type:</b>  BollyWood </p>
+					<p><b>Price:</b>  Rs.120/- </p>
+					<p><b>Rating:</b>  90% </p>
+				</div>
+			</div>
+			<div id="data">
+				<h3 id="h">Change Data Here !!</h3>
+				<form action="#" method="GET">
+					<h4>Enter <b><i> User Name</i></b> To change .</h4>
+					<input type="text" placeholder="Enter New User Name " name="Name" required>
+					<button class="btn" name="change" value="u_id">Change</button>
+				</form>
+				<form action="#" method="GET">
+					<hr>
+					<h4>Enter <b><i>Password</i></b> to Change .</h4>
+					<input type="text" placeholder="Enter  New Password" name="path" required>
+					<button class="btn" name="change" value="pwd">Change</button>
+				</form>
+					<hr>
+				<form action="#" method="GET">
+					<h4>Enter <b><i>Email</i></b> to Change .</h4>
+					<input type="text" placeholder="Enter new Email" name="Type" required>
+					<button class="btn" name="change" value="email">Change</button>
+					<hr>
+					
+				</form>
+
+			</div>
+		User setting 		
+	-->
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+header{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background-color: #145a96;
+	text-align: center;
+}
+body{
+	background-color: #cfcfcf;
+}
+header img{
+	height: 50px;
+	width: 240px;
+}
+header input{
+	z-index: 99;
+	border-radius: 10px;
+	border:solid 1px red;
+	position: absolute;
+	top: 20px;
+	width: 160px;
+	height: 30px;
+}
+header input:hover{
+	background-color: yellow;
+}
+#i1{
+	right: 360px
+}
+#i2{
+	right: 190px;
+}
+header form button{
+	border: none;
+	background-color: #3dcd3d;
+	color: white;
+	position: absolute;
+	right: 50px;
+	top: 10px;
+	height: 35px;
+	width: 120px;
+	font-size: 20px;
+	padding: 2px;
+	border: solid 2px black;
+	border-radius: 10px;
+}
+header form button:hover{
+	background-color:#099909;
+}
+#left{
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	margin: 0px;
+	background-color: black;
+	width: 300px;
+	height: 1100px;
+	color: white;
+}
+#left img{
+	margin-left: 80px;
+	height: 70px;
+	width: 70px;
+	border: solid 2px white;
+	border-radius: 50%;
+}
+#right{
+	position: absolute;
+	left: 300px;
+	top: 50px;
+	margin: 0px;
+	background-color:#cfcfcf;
+	width: auto;
+	height: auto;	
+	margin:10px;
+}
+#newadd{
+	border:solid 1px grey;
+	box-shadow: 1px 1px 1px black;
+	padding:10px;
+	margin:5px;
+	width:auto;
+}
+#info{
+	background-color: white;
+	position: absolute;
+	font-size:20px;
+	border:solid 2px black;
+	padding: 5px;
+	top: 90px;
+	left: 700px;
+	height: 790px;
+	width: 320px;
+}
+#info img{
+	width: 300px;
+	height: 300px;
+	margin: 5px;
+	border:solid 1px grey;
+}
+.b{
+	padding: 10px;
+	margin-bottom:5px; 
+	font-weight: 1;
+	border: none;
+	border: solid 2px white;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	font-size: 15px;
+	width: 95%;
+	height: 40px;
+	text-align: left;
+}
+.b:hover{
+	background-color: white;
+	color: black;
+}
+.b1{
+	width:90%;
+	margin-left:20px;
+}
+
+#active{
+	background-color:#337ab7;
+}
+h2{
+	font-size: 30px;
+	padding-left:300px;
+	color:#1456bd;
+	text-shadow:2px 3px 3px black;
+}
+h4{
+	color:green;
+	font-size: 18px;
+}
+input{
+	border: none;
+	padding: 5px;
+	margin-top: -10px;
+	margin-left: 30px;
+	width: 500px;
+	height: 20px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	border:solid 0.5px grey;
+	border-radius: 2px;
+	background-color:white;
+}
+#r{
+	color: red;
+	font-size: 24px;
+}
+hr{ 
+	color: black;
+}
+.btn{
+	margin: 50px;
+	margin-left: 220px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 10px;
+	height: 40px;
+	background-color: green;
+	color: white;
+	font-size: 20px;
+	box-shadow: 4px 4px 4px black;
+}
+.btn:hover{
+	color: black;
+	background-color: lightgreen;
+}
+/*Setting style*/
+#main{
+ 	background-color: white;
+ 	width: 1000px;
+ 	height: 300px;
+ 	border-radius:30px; 
+ 	border: dashed 1px red;
+}
+#main #imgdiv{
+	position: absolute;
+	width: 500px;
+	height: 250px;
+	margin-top:20px;
+	margin-left: 30px;
+}
+#main #imgdiv img{
+	width: 250px;
+	height: 250px;
+	padding: 10px;
+}
+#main #userinfo{
+	font-size: 18px;
+	position:absolute;
+	top: 100px;
+	left: 510px;
+	width: 400px;
+	height: 400px;
+}
+#data{
+	padding: 10px;
+	margin: 20px;
+	padding-left: 50px;
+	width: 1000px;
+	background-color:white;
+
+}
+#data #h{
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding: 10px;
+ 	text-align: center;
+ 	color: white;
+ 	background-color: #3e3efa;
+ 	height: 50px;
+ 	width: 900px;
+}
+#data input{
+	margin: 0px;
+	height: 30px;
+}
+/*style for Ticket book*/
+#ticket{
+	margin-top: 50px;
+	margin-left: 100px;
+}
+#ticket table tr{
+	width: 800px;
+	border: solid 1px white;
+}
+#ticket table tr td{
+	letter-spacing: 2px;
+	font-size: 16px;
+	border: solid 1px white;
+	color: white;
+	width: 400px;
+	padding: 10px;
+	background-color: black;
+}
+#ticket table tr #m{
+	padding-left: 230px;
+}
+th{
+	font-size: 18px;
+	width: 400px;
+	padding: 10px;
+	border-left: solid 2px grey;
+	background-color: white;
+}
+#he{
+	color: red;
+	letter-spacing: 1px;
+	margin-top: 50px;
+}
+/*style for home page*/
+#homepage{
+	padding:50px;
+	background-color: white;
+	font-size: 28px;
+	text-align: center;
+	width: 1000px;
+	height: 1000px;
+}
