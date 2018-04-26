@@ -1,9 +1,13 @@
 # rdbms-mini-project
+
 website using 
-1.HTML5
-2.CSS3
-3.JAVA SCRIPT
-4.PHP
+
+
+    1.HTML5
+    2.CSS3
+    3.JAVA SCRIPT
+    4.PHP
+    5.SQL Database
 
 Link:
 https://stackoverflow.com/questions/21836282/php-function-mail-isnt-working
