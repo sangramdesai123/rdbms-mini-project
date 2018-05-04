@@ -45,6 +45,30 @@ Use these link to send mail and set up the php.ini file in php
     Link:  https://stackoverflow.com/questions/21836282/php-function-mail-isnt-working
  
  
+ ### Home Page
+ 
+ 
+ ![Home Page ](https://github.com/sangramdesai123/rdbms-mini-project/blob/master/Website%20Frontend%20Photos/homepage.JPG)
+ 
+ 
+ ### Filter/Search Page
+ 
+ 
+ ![Search page ](https://github.com/sangramdesai123/rdbms-mini-project/blob/master/Website%20Frontend%20Photos/filter.JPG)
+ 
+ 
+ ### Bokking Page
+ 
+ 
+ ![Bokking ](https://github.com/sangramdesai123/rdbms-mini-project/blob/master/Website%20Frontend%20Photos/booking_page.JPG)
+ 
+  ### Ticket From Gmail
+  
+  
+ ![Gmail ](https://github.com/sangramdesai123/rdbms-mini-project/blob/master/Website%20Frontend%20Photos/gmail.JPG)
+ 
+ 
+ 
 TIP:
 
 ## Running the website
