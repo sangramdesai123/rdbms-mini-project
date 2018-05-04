@@ -9,7 +9,7 @@
   }
     #fo{
       width: 100%;
-      height: 300px;
+      height: 380px;
       background-color: black;
       color: white;
       padding: 15px;
@@ -93,6 +93,12 @@ h2{
   line-height: 25px;
   font-size: 18px;
 }
+ h6{
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 5px;
+  font-weight: 1;
+}
 
   </style>
 <body>
@@ -110,12 +116,28 @@ h2{
 <div class="row">
   <div class="column">
     <p class="foo">Movies</p>
+    <p class="foo"><i><h6> # Iron Man</h6> </i></p>
+    <p class="foo"><i><h6> # Rage </h6></i></p>
+    <p class="foo"><i><h6> # Sairat </h6></i></p>
+    <p class="foo"><i><h6> # Hulk </h6> </i></p>
+    <p class="foo"><i><h6> # Inception </h6> </i></p>
   </div>
   <div class="column">
     <p class="foo">Languges</p>
+    <p class="foo"><i><h6> # Marathi</h6> </i></p>
+    <p class="foo"><i><h6> # English </h6></i></p>
+    <p class="foo"><i><h6> # Hindi </h6></i></p>
+    <p class="foo"><i><h6> # Gujarati</h6> </i></p>
+    <p class="foo"><i><h6> # Punjabi</h6> </i></p>
+    <p class="foo"><i><h6> # Tamil </h6></i></p>
   </div>
   <div class="column">
     <p class="foo">Theater</p>
+    <p class="foo"><i><h6> # Thane</h6> </i></p>
+    <p class="foo"><i><h6> # Kurla </h6></i></p>
+    <p class="foo"><i><h6> # Mulund </h6></i></p>
+    <p class="foo"><i><h6> # Kanjur Marg</h6> </i></p>
+    <p class="foo"><i><h6> # CSMT</h6> </i></p>
   </div>
 </div>
 </div>

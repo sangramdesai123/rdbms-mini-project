@@ -3,11 +3,15 @@
  ?>
 <!DOCTYPE html>
 <html>
-<head><style>
+<head>
+<link rel="stylesheet" type="text/css" href="animate.css">
+<style>
 * {box-sizing: border-box}
 .mySlides {display: none}
 
-
+img{
+  height: 500px;
+}
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
@@ -91,7 +95,30 @@
   from {opacity: .4} 
   to {opacity: 1}
 }
-
+.small{
+  position: relative;
+  width: 500px;
+  height: 250px;
+  display: block;
+  box-shadow:2px 5px 5px 5px grey;
+}
+.small .Slides{
+  height: 250px;
+}
+.mm{
+  background-color: white;
+  padding: 5px;
+  position: relative;
+  border:solid black 2px ;
+}
+.m{
+  position: relative;
+  left: 550px;
+  width: 450px;
+  top: -250px;
+  position: relative;
+  letter-spacing: 2px;
+}
 </style>
 </head>
 <body>
@@ -100,26 +127,26 @@
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 4</div>
-  <img src="images/img1.jpg" style="width:100%">
-  <div class="text">Caption Text<br><h1>hello</h1></div>
+  <img src="images/img.jpg" style="width:100%">
+  <div class="text"><h1 class="bounceInDown"> 3D Movies </h1><br><h1> Get New Experience !!</h1></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 4</div>
-  <img src="images/img2.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
+  <img src="images/i1.jpg" style="width:100%">
+  <div class="text"><h1> Movie Theaters </h1></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 4</div>
-  <img src="images/img3.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
+  <img src="images/i2.jpg" style="width:100%">
+  <div class="text"><h1> Virtual Experience !! </h1></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 4</div>
-  <img src="images/img4.jpg" style="width:100%">
-  <div class="text">Caption Four</div>
+  <img src="images/i3.jpg" style="width:100%">
+  <div class="text"><h1> Movie Theaters Screen </h1></div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -136,8 +163,33 @@
   <section class="main-container">
     <div class="main-wrapper">
     <h2>Home</h2>
-
+    <div class="mm">
+      <div class="small">
+          <img class="Slides" src="images/in.jpg" style="width:100%">
+          <img class="Slides" src="images/in2.jpg" style="width:100%">
+          <img class="Slides" src="images/in3.jpg" style="width:100%">
     </div>
+      <div class="m">
+         <strong style="color: #49ba8e">Avengers: Infinity War </strong>
+         <br><br><br>
+          <p>
+            As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.
+        </p>
+      </div>
+      <marquee>
+        <h3>***  Showtimes for Avengers: Infinity War Date : Fri, 27 Apr 9:45am 1:00pm 4:15pm 7:30pm  10:45pm 
+        Book Ticket Now And Save World From Thanos ! ***** </h3>
+      </marquee>
+      <hr>
+    </div>
+    
+         
+    
+      
+    </p>
+        
+    </div>
+      
   </section>
 <script>
 var slideIndex = 1;
@@ -165,6 +217,22 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+}
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("Slides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
 

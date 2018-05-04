@@ -7,6 +7,29 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		
+
+
+.con{
+	 position: relative;
+  float: left;
+  text-align: center;
+  width: 215px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  height: 203px;
+    padding:0px;
+    color: #444;
+    background-color: white;
+    border:solid 2px red;
+}
+.image{
+	display: block;
+}
+
+
+	</style>
 </head>
 <body>
 	<header>
@@ -82,9 +105,9 @@
 			<span class="glyphicon glyphicon-home"></span> Home </button>
 			<button class="b" name="movie">
 				<span class="glyphicon glyphicon-play-circle"></span> Movie
-				<button class="b b1" name="movie" value="Hollywood"> Hollywood</button>
-				<button class="b b1" name="movie" value="Bollywood"> Bollywood</button>
-				<button class="b b1" name="movie" value="Tollywood"> Tollywood</button>
+				<button class="b b1" name="Type" value="Hollywood"> Hollywood</button>
+				<button class="b b1" name="Type" value="Bollywood"> Bollywood</button>
+				<button class="b b1" name="Type" value="Tollywood"> Tollywood</button>
 			</button>
 			<button class="b" name="ticket">
 			<span class="glyphicon glyphicon-credit-card"></span> Ticket Book</button>
@@ -108,25 +131,78 @@
 			</div>';
 		//home page end
 		}
+
+		//movie page desply
+		if (isset($_GET['Type'])) {
+			echo '<h2>Movies In Theater!!</h2>';
+			$con=new mysqli('localhost','root','','loginsystem');
+			$res=0;
+						if($_GET['Type']=="Hollywood")
+						{
+							$sql='SELECT * FROM movies WHERE Type="HollyWood"';
+							$res=mysqli_query($con,$sql);
+						}
+						if($_GET['Type']=="Bollywood")
+						{
+							$sql='SELECT * FROM movies WHERE Type="BollyWood"';
+							$res=mysqli_query($con,$sql);
+						}
+						if($_GET['Type']=="Tollywood")
+						{
+							$sql='SELECT * FROM movies WHERE Type="TollyWood"';
+							$res=mysqli_query($con,$sql);
+						}
+						if ($res) {
+							while ($row=mysqli_fetch_array($res)) {
+								$s="../".$row["path"];
+							echo "<div class='con'>";?><img src="<?php echo 
+							$s;?>" height="200" width="210" class="image">
+							<?php echo "</div>";
+							
+							}
+						}
+						
+						
+		}
+		
+
+
+
 		if (isset($_GET['ticket'])) {
 			//			<!--Ticket Booked-->
-		echo '<h2>Ticket Collections & Bokking!</h2>
-		<div id="ticket">
-			<table>
-				<tr>
-					<td>Total Collection :</td>
-					<td id="m"> Rs 250000.00 /-</td>
-				</tr>
-				<tr>
-					<td>Total Ticket Sold :</td>
-					<td id="m"> 1500 </td>
-				</tr>
-				<tr>
-					<td>Total Movies In Theater :</td>
-					<td id="m"> 9 </td>
-				</tr>
-			</table>
+			$con=new mysqli('localhost','root','','loginsystem');
 
+			$sql="SELECT SUM(no_of_ticket) AS total FROM theater";
+			$res=mysqli_query($con,$sql);
+			$row=mysqli_fetch_array($res);
+			$t=$row['total'];
+				
+
+			$sql="SELECT SUM(price)AS total  FROM theater";
+			$res=mysqli_query($con,$sql);
+			$row=mysqli_fetch_array($res);
+			$total=$row['total'];
+
+			echo '<h2>Ticket Collections & Bokking!</h2>
+			<div id="ticket">
+				<table>
+					<tr>
+						<td>Total Collection :</td>
+						<td id="m"> Rs '.$total.' /-</td>
+					</tr>
+					<tr>
+						<td>Total Ticket Sold :</td>
+						<td id="m"> '.$t.' </td>
+					</tr>
+					<tr>
+						<td>Total Movies In Theater :</td>
+						<td id="m"> 9 </td>
+					</tr>
+				</table>';
+
+			$sql="SELECT * FROM theater";
+			$res=mysqli_query($con,$sql);
+			echo '
 			<h3 id="he">Movie Bokking Details : </h3>
 			<div id="usertable">
 				<table>
@@ -136,21 +212,30 @@
 						<th style="width: 50px">No Of Ticket</th>
 						<th>Name of Movie</th>
 						<th>Price</th>
-					</tr>
-					<tr>
-						<td style="width: 20px"> 1. </td>
-						<td> Tushar Kadam </td>
-						<td style="width: 50px"> 5 </td>
-						<td>Iron Man </td>
-						<td> 600/-</td>
-					</tr>
-					<tr>
-						<td style="width: 2px"> 2. </td>
-						<td> Jasdeep Sing </td>
-						<td style="width: 50px"> 10 </td>
-						<td>Iron Man </td>
-						<td> 1500/-</td>
-					</tr>
+					</tr>';
+
+						if (!$res) {
+						  printf("Error: %s\n", mysqli_error($con));
+						}
+						else{
+						$row=0;
+						while ($row=mysqli_fetch_array($res)){
+							$i=$row['id'];
+						  $username=$row['name'];
+						  $mname=$row['movie_name'];
+						  $nt=$row['no_of_ticket'];
+						  $p=$row['price'];
+
+						  		echo '<tr>
+									<td style="width: 20px">'.$i.' </td>
+									<td>'.$username .' </td>
+									<td style="width: 50px"> '.$nt.'</td>
+									<td>'.$mname.'</td>
+									<td> '.$p.'/-</td>
+								</tr>';
+						  }
+						} 
+					echo '
 				</table>
 			</div>
 
@@ -162,23 +247,23 @@
 			echo '
 			<h2>Add New Movies In Theater !</h2>
 			<div id="newadd">
-				<form action="#" method="GET">
+				<form action="addnew.php" method="GET">
 				<h4>Enter <b><i>Id</i></b> for the movie to store in database. <span id="r"> * </span></h4>
 				<input type="text" placeholder="Enter id" name="id" required><br>
 				<hr>
 				<h4>Enter <b><i>Name</i></b> of the movie to store in database. <span id="r"> * </span></h4>
 				<input type="text" placeholder="Enter Name " name="Name" required><br>
 				<hr>
-				<h4>Enter <b><i>Path</i></b> where image is saved to store in database. <span id="r"> * </span></h4>
+				<h4>Enter <b><i>Path</i></b> as movie/Marathi/name.jpg . <span id="r"> * </span></h4>
 				<input type="text" placeholder="Enter path" name="path" required><br>
 				<hr>
 				<h4>Enter <b><i>Type</i></b> of movie Hollywood/Bollywood etc. <span id="r"> * </span></h4>
 				<input type="text" placeholder="Type" name="Type" required><br>
 				<hr>
-				<h4>Enter <b><i>Languge</i></b> for movie Marathi/English/hindi etc. <span id="r"> * </span></h4>
+				<h4>Enter <b><i>Languge</i></b> for movie Marathi/English/Hindi etc. <span id="r"> * </span></h4>
 				<input type="text" placeholder="Enter Languge" name="Languge" required><br>
 				<hr>
-				<h4>Enter <b><i>Gener</i></b> for the movie to store in database. <span id="r"> * </span></h4>
+				<h4>Enter <b><i>Gener</i></b> As Action/Science-fi/Animation/Adventure etc. <span id="r"> * </span></h4>
 				<input type="text" placeholder="Enter Gener" name="Gener" required><br>
 				<hr>
 				<h4>Enter <b><i>Price</i></b> for the movie to store in database. <span id="r"> * </span></h4>
@@ -213,7 +298,7 @@
 					<p><b>Name : </b>'.$_SESSION['u_first']." ".$_SESSION['u_last'].'</p>
 					<p><b>Gmail : </b>'.$_SESSION['u_email'].'</p>
 					<p><b>User Id : </b>'.$_SESSION['u_uid'].'</p>
-					<p><b>Timming : </b> 8.30 AM -9.30 PM</p>
+					<p><b>Timming : </b> 8.30 AM - 9.30 PM</p>
 					<p><b>Salary : </b> Rs 10000/-</p>
 					</div>
 			</div>

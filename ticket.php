@@ -30,6 +30,17 @@ $theater="Balaji Movieplex: Kopar Khairane(Screen3)<br>
 $nofoticket=$_GET['con'];
 $gs=0.09*32;
 $total=$gs+$gs+($price*$nofoticket)+32;
+
+
+//inserting into theayer table
+  $u=$_SESSION['u_uid'];
+
+$sql="INSERT INTO theater( name, movie_name, no_of_ticket, price) VALUES ('$u','$name1',$nofoticket,'$total');";
+$res=mysqli_query($con,$sql);
+
+
+
+
 echo '
 <div ><h1 style="color:#2ba02b; text-align:center;font-size:46px;"><img src="images/correct.jpg" style="width: 80px;height: 80px ;position:relative;top:15px;border-radius:50%;">Tickets Has Been Book Successfully!!!!</h1></div>
 <div style="

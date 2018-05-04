@@ -146,7 +146,7 @@ img{
 
   <div class="column">
     <div class="card">
-      <img src="images/team2.jpg" alt="Mike" style="width:100%">
+      <img src="images/sangram.jpg" alt="Mike" style="width:100%">
       <div class="container">
         <h3>Sangram Desai</h3>
         <p class="title">Art Director</p>

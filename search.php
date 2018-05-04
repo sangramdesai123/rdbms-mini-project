@@ -274,7 +274,7 @@
 						}
 						elseif ($_GET['Genre']=="History") {
 								$res=0;
-							$sql='SELECT * FROM movies WHERE Genre="Historys"';
+							$sql='SELECT * FROM movies WHERE Genre="History"';
 							$res=mysqli_query($con,$sql);
 						}
 						elseif ($_GET['Genre']=="Comedy") {

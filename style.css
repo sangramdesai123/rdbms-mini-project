@@ -230,6 +230,8 @@ header .nav-login a{
 	cursor: pointer;
 }
 .main-container{
+	height: 800px;
+	position: relative;
 	padding-top: 40px;
 }
 .main-container h2{
