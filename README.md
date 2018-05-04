@@ -1,8 +1,5 @@
 # rdbms-mini-project
  
-website using 
-# rdbms-mini-project
- 
 Movie Ticket Booking Website using 
  
      1.HTML5
