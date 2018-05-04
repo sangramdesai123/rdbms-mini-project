@@ -1,4 +1,4 @@
-# rdbms-mini-project
+# Rdbms-project
  
 Movie Ticket Booking Website using 
  
