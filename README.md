@@ -8,8 +8,7 @@ Movie Ticket Booking Website using
      4.PHP
      5.SQL Database
 
-Link:
-https://stackoverflow.com/questions/21836282/php-function-mail-isnt-working
+
 ## Getting Started
 
 **ADMIN** :
